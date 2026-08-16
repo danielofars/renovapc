@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RenovaPC - Dando mais vida ao seu computador</title>
+<style>
+  :root {
+    --blue: #0a66c2;
+    --dark: #1a2233;
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --green: #1e7d47;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--blue), #0d3b66);
+    color: white;
+    padding: 64px 20px 56px;
+    text-align: center;
+  }
+  header h1 { font-size: 2.4rem; margin: 0 0 12px; }
+  header p { font-size: 1.15rem; max-width: 640px; margin: 0 auto; opacity: 0.95; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 40px 20px 80px; }
+  section { margin-bottom: 48px; }
+  h2 { color: var(--blue); font-size: 1.5rem; border-bottom: 2px solid #e1e8f0; padding-bottom: 8px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 20px; }
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e6ebf2;
+  }
+  .card h3 { margin-top: 0; color: var(--dark); font-size: 1.05rem; }
+  .steps { counter-reset: step; list-style: none; padding: 0; }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding: 12px 0 12px 44px;
+    border-bottom: 1px solid #e6ebf2;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: var(--blue);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .cta {
+    text-align: center;
+    background: var(--card);
+    border-radius: 16px;
+    padding: 40px 24px;
+    border: 1px solid #e6ebf2;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 8px 8px 0;
+  }
+  .btn.secondary { background: var(--green); }
+  .btn.outline { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #6b7686;
+    font-size: 0.9rem;
+  }
+  .disclaimer {
+    background: #fff8e6;
+    border: 1px solid #f0d98c;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Projeto de inclusão digital</div>
+  <h1>RenovaPC</h1>
+  <p>Um kit gratuito e guiado para deixar computadores Windows lentos mais rápidos — sem precisar trocar de máquina.</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>O problema</h2>
+    <p>Muita gente descarta ou deixa de usar um computador ainda funcional só porque ele "ficou lento", sem saber que na maioria das vezes o problema tem solução simples e gratuita. Trocar de equipamento custa dinheiro que nem toda família, escola ou ONG tem disponível — e cada computador descartado cedo demais também é lixo eletrônico a mais.</p>
+  </section>
+
+  <section>
+    <h2>Quem se beneficia</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Famílias de baixa renda</h3>
+        <p>Que dependem de um único computador para estudo, trabalho e acesso a serviços públicos digitais.</p>
+      </div>
+      <div class="card">
+        <h3>Escolas públicas</h3>
+        <p>Com laboratórios de informática antigos e orçamento limitado para renovar equipamentos.</p>
+      </div>
+      <div class="card">
+        <h3>ONGs e telecentros</h3>
+        <p>Que reformam e doam computadores usados, e precisam de ferramentas simples para os voluntários.</p>
+      </div>
+      <div class="card">
+        <h3>Pessoas idosas</h3>
+        <p>Que querem continuar usando o computador que já conhecem, sem lidar com a complexidade de um novo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Como funciona</h2>
+    <ol class="steps">
+      <li>Baixe o programa <code>RenovaPC.bat</code> e o <a href="GUIA.md">guia de uso</a> no repositório do GitHub.</li>
+      <li>Abra o programa como Administrador — ele explica cada etapa em linguagem simples.</li>
+      <li>Escolha uma opção por vez; nada é feito sem sua confirmação.</li>
+      <li>Reinicie o computador ao final para aplicar todas as mudanças.</li>
+    </ol>
+    <div class="disclaimer">
+      <strong>Aviso:</strong> faça backup de arquivos importantes antes de usar, e peça apoio de alguém com experiência em informática para as opções marcadas como "Avançado".
+    </div>
+  </section>
+
+  <section>
+    <h2>Tecnologias</h2>
+    <p>O RenovaPC usa ferramentas nativas do Windows (Batch script, DISM, SFC, Limpeza de Disco, Storage Sense) para não depender de instalar nada extra — importante para computadores antigos e conexões de internet limitadas.</p>
+  </section>
+
+  <section class="cta">
+    <h2 style="border: none;">Quer usar ou contribuir?</h2>
+    <p>O projeto é gratuito, aberto e feito para ser compartilhado.</p>
+    <a class="btn" href="https://github.com/danielofars/renovapc">Ver no GitHub</a>
+    <a class="btn secondary" href="RenovaPC.bat">Baixar o programa</a>
+    <a class="btn outline" href="GUIA.md">Ler o guia</a>
+  </section>
+
+</main>
+
+<footer>
+  RenovaPC — projeto de inclusão digital mantido por Daniel Oliveira · Licença MIT
+</footer>
+
+</body>
+</html>
